@@ -1,0 +1,3 @@
+region = "my-region"
+project = "my-kafka-project"
+consumer-project = "my-consumer-project"
