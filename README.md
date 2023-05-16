@@ -18,10 +18,9 @@ We will configure Private Service Connect (PSC) in two project. The Kafka projec
 
 In the Kafka project (the project which host the Kafka cluster).
 
-Make a copy of [terraform.tfvarssample](./terraform.tfvarssample) file  in a terrafrom.tfvars file. Replace the values with yours.
+Make a copy of [terraform.tfvarssample](./terraform.tfvarssample) file  in a terrafrom.tfvars file. Replace the values with yours then execute :
 
 ```bash
-cd kafka-project
 terraform init
 terraform apply
 ```
