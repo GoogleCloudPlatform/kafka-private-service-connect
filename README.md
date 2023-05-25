@@ -6,7 +6,7 @@ TL;DR Want to Expose Kafka topics in a host K8S cluster/project to K8S clusters 
 There are many times, when building an environment, that it's necessary to have compartmentalised 'silos' of applications and data. This might be because the service you're providing involves separating customer data, isolation for billing purposes or maybe it's a regluatory requirement. In Google Cloud there are many ways to achieve this setup, some more scalable/supportable than others. 
 
 
-The most basic way is to setup [VPC peering](https://cloud.google.com/vpc/docs/vpc-peering)/forwarding between all the projects. This enables subnets in the host project to be shared with the service project and vice versa. The downside is you can't have overlapping IP subnets and all projects' VPCs need to be configured individually on creation and each time there's a change. There are also some limnits on the number of peers you can have. 
+The most basic way is to setup [VPC peering](https://cloud.google.com/vpc/docs/vpc-peering)/forwarding between all the projects. This enables subnets in the host project to be shared with the service project and vice versa. The downside is you can't have overlapping IP subnets and all projects' VPCs need to be configured individually on creation and each time there's a change. There are also some limits on the number of peers you can have. 
 
 The second option is shared VPC [Shared VPC](https://cloud.google.com/vpc/docs/shared-vpc) which enables service projects to gain access to IP subnest that exist in the host project. Only the host project needs the firewall rules/policy to be setup. More secure, much more easy. But there are limitations with this too.
 
