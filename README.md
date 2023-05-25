@@ -8,9 +8,9 @@ There are many times, when building an environment, that it's necessary to have 
 
 The most basic way is to setup [VPC peering](https://cloud.google.com/vpc/docs/vpc-peering)/forwarding between all the projects. This enables subnets in the host project to be shared with the service project and vice versa. The downside is you can't have overlapping IP subnets and all projects' VPCs need to be configured individually on creation and each time there's a change. There are also some limits on the number of peers you can have. 
 
-The second option is shared VPC [Shared VPC](https://cloud.google.com/vpc/docs/shared-vpc) which enables service projects to gain access to IP subnest that exist in the host project. Only the host project needs the firewall rules/policy to be setup. More secure, much more easy. But there are limitations with this too.
+The second option is [Shared VPC](https://cloud.google.com/vpc/docs/shared-vpc) which enables service projects to gain access to IP subnest that exist in the host project. Only the host project needs the firewall rules/policy to be setup. More secure, much more easy. But there are limitations with this too.
 
-The most modern, and by far the most flexible way is with [Private Service Connect](https://cloud.google.com/vpc/docs/private-service-connect) which enable cross project, corss-region and even cross organisation(!) sharing of your applications. 
+The most modern, and by far the most flexible way is with [Private Service Connect](https://cloud.google.com/vpc/docs/private-service-connect) which enables cross project, [cross-region](https://cloud.google.com/vpc/docs/about-accessing-vpc-hosted-services-endpoints#global-access) and even cross organisation(! [example](https://docs.confluent.io/cloud/current/networking/private-links/gcp-private-service-connect.html)) sharing of your applications. 
 
 This article specifically addresses how to operate a [Kafka](https://kafka.apache.org/) Cluster in [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview) and have service projects access the Kafka topics securely and with the lowest configuration requirements.
 
