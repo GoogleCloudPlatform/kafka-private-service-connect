@@ -3,6 +3,8 @@ TL;DR Want to Expose Kafka topics in a host K8S cluster/project to K8S clusters 
 
 ## What we are trying to do?
 
+![GKE_PSC_Kafka](gke-psc-kafka.png)
+
 There are many times, when building an environment, that it's necessary to have compartmentalised 'silos' of applications and data. This might be because the service you're providing involves separating customer data, isolation for billing purposes or maybe it's a regluatory requirement. In Google Cloud there are many ways to achieve this setup, some more scalable/supportable than others. 
 
 
