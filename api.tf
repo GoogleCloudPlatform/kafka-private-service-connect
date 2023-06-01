@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Copyright 2023 Google. This software is provided as-is, without warranty or representation for any use or purpose. Your use of it is subject to your agreement with Google.
+
 resource "google_project_service" "apis" {
   for_each = toset([
     # Note that appengine is required for both GAE and Cloud Tasks.
