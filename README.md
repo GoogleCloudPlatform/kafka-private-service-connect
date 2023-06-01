@@ -98,3 +98,5 @@ Finally, if you go to Cloud Run service deploy, register a cluster and give as a
 | kafka-boootstrap.kafka.demo.io | 9092 |
 
 You should now have access to your Kafka cluster, from a Cloud Run instance, through Private Service Connect.
+
+Copyright 2023 Google. This software is provided as-is, without warranty or representation for any use or purpose. Your use of it is subject to your agreement with Google.
